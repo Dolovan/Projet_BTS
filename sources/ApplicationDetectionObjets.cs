@@ -59,7 +59,7 @@ namespace Application
             this.parametrerDetection(0.5f, @"..\..\..\..\reseaux_neurones\frozen_inference_graph.pb", @"..\..\..\..\reseaux_neurones\mscoco_label_map.pbtxt");
         }
 
-        public void ChargerObjetsIdentifiables_depuisXML(string filename)
+        public void ChargerObjetsIdentifiables_depuisFichierXML(string filename)
         {
             this.listeObjetsIdentifiables.ChargerObjetsIdentifiables_depuisXML(filename);
         }
@@ -69,7 +69,7 @@ namespace Application
             this.listeObjetsIdentifiables.ChargerObjetsIdentifiables_depuisXmlDocument(XMLobjetsIdentifiables);
         }
 
-        public void ChargerNuagePoint3D_depuisXML(string filename)
+        public void ChargerNuagePoint3D_depuisFichierXML(string filename)
         {
             this.nuagePoint3D.ChargerNuagePoint3D_depuisXML(filename);
         }
@@ -79,7 +79,7 @@ namespace Application
             this.nuagePoint3D.ChargerNuagePoints3D_depuisXmlDocument(XMLNuagePoints3D);
         }
 
-        public void ChargerEnvironnementsIdentifiables_depuisXML(string filename)
+        public void ChargerEnvironnementsIdentifiables_depuisFichierXML(string filename)
         {
             this.listeEnvironnementsIdentifiables.ChargerEnvironnementsIdentifiables_depuisXML(filename);
         }
@@ -89,13 +89,13 @@ namespace Application
             this.listeEnvironnementsIdentifiables.ChargerEnvironnementsIdentifiables_depuisXmlDocument(XMLEnvironnementsIdentifiables);
         }
 
-        public void ChargerImageOrientee_depuisXML(string filename)
+        public void ChargerImageOrientee_depuisFichierXML(string filename)
         {
             this.image.ChargerImageOrientee_depuisXML(filename);
             this.DefinirEnvironnement(this.image.GetLibelle());
         }
 
-        public void ChargerImageOrientee_depuisXmlDocumentL(XmlDocument XMLImageOrientee)
+        public void ChargerImageOrientee_depuisXmlDocument(XmlDocument XMLImageOrientee)
         {
             this.image.ChargerImageOrientee_depuisXmlDocument(XMLImageOrientee);
         }
