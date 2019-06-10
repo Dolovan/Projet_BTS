@@ -7,16 +7,16 @@ namespace Application
         {
             CApplicationDetectionObjets application = new CApplicationDetectionObjets();
             
-            application.ChargerEnvironnementsIdentifiables_depuisXML(@"..\..\..\..\fichiers_XML\EnvironnementsIdentifiables.xml");
+            application.ChargerEnvironnementsIdentifiables_depuisFichierXML(@"..\..\..\..\fichiers_XML\EnvironnementsIdentifiables.xml");
            //application.ChargerEnvironnementsIdentifiables_depuisXmlDocument(...);
 
-            application.ChargerImageOrientee_depuisXML(@"..\..\..\..\fichiers_XML\ImageOrientee.xml");
-            //application.ChargerImageOrientee_depuisXmlDocumentL(...);
+            application.ChargerImageOrientee_depuisFichierXML(@"..\..\..\..\fichiers_XML\ImageOrientee.xml");
+            //application.ChargerImageOrientee_depuisXmlDocument(...);
 
-            application.ChargerNuagePoint3D_depuisXML(@"..\..\..\..\fichiers_XML\NuagePoints3D.xml");
-            ///application.ChargerNuagePoints3D_depuisXmlDocumentL(...);
+            application.ChargerNuagePoint3D_depuisFichierXML(@"..\..\..\..\fichiers_XML\NuagePoints3D.xml");
+            ///application.ChargerNuagePoints3D_depuisXmlDocument(...);
 
-            application.ChargerObjetsIdentifiables_depuisXML(@"..\..\..\..\fichiers_XML\ObjetsIdentifiables.xml");
+            application.ChargerObjetsIdentifiables_depuisFichierXML(@"..\..\..\..\fichiers_XML\ObjetsIdentifiables.xml");
             //application.ChargerEnvironnementsIdentifiables_depuisXmlDocument(...);
 
            //application.parametrerDetection(0.1f);
