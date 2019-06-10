@@ -1,0 +1,183 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.1",
+    "signature": "b285ad66ed7982f4064e9e343b2fbb4403cf9479"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {
+      "Application-detection-objet/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2",
+          "System.Drawing.Common": "4.5.1",
+          "TensorFlow.NET": "0.8.0"
+        },
+        "runtime": {
+          "Application-detection-objet.dll": {}
+        }
+      },
+      "ArrayFire/0.0.2": {
+        "runtime": {
+          "lib/netstandard2.0/ArrayFire.dll": {
+            "assemblyVersion": "0.0.2.0",
+            "fileVersion": "0.0.2.0"
+          }
+        }
+      },
+      "Google.Protobuf/3.7.0": {
+        "runtime": {
+          "lib/netstandard1.0/Google.Protobuf.dll": {
+            "assemblyVersion": "3.7.0.0",
+            "fileVersion": "3.7.0.0"
+          }
+        }
+      },
+      "Microsoft.Win32.SystemEvents/4.5.0": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp2.0/Microsoft.Win32.SystemEvents.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
+      "Newtonsoft.Json/12.0.2": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.2.23222"
+          }
+        }
+      },
+      "NumSharp/0.10.1": {
+        "dependencies": {
+          "ArrayFire": "0.0.2",
+          "System.Memory": "4.5.2",
+          "System.Numerics.Vectors": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NumSharp.Core.dll": {
+            "assemblyVersion": "0.10.1.0",
+            "fileVersion": "0.10.1.0"
+          }
+        }
+      },
+      "System.Drawing.Common/4.5.1": {
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Drawing.Common.dll": {
+            "assemblyVersion": "4.0.0.1",
+            "fileVersion": "4.6.26919.2"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netcoreapp2.0/System.Drawing.Common.dll": {
+            "rid": "unix",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.0.1",
+            "fileVersion": "4.6.26919.2"
+          },
+          "runtimes/win/lib/netcoreapp2.0/System.Drawing.Common.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.0.1",
+            "fileVersion": "4.6.26919.2"
+          }
+        }
+      },
+      "System.Memory/4.5.2": {},
+      "System.Numerics.Vectors/4.5.0": {},
+      "TensorFlow.NET/0.8.0": {
+        "dependencies": {
+          "Google.Protobuf": "3.7.0",
+          "NumSharp": "0.10.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/TensorFlow.NET.dll": {
+            "assemblyVersion": "0.8.0.0",
+            "fileVersion": "0.8.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Application-detection-objet/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ArrayFire/0.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vqZfeNiNtVtN+AICSwOr+dk990mp1Yb1AXn3Jbsxw4dm7QEE8zJN9W+kyRnf4sde6ylT3A4wmaNg5VDgn2M7pw==",
+      "path": "arrayfire/0.0.2",
+      "hashPath": "arrayfire.0.0.2.nupkg.sha512"
+    },
+    "Google.Protobuf/3.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OvssyqQTrpJgdH4fjztsCV9AhUo9jgGpDbZ5XAAqC+X6MIUsifHk8Woeom1HXlHdqo/XebiEMpYySE9AxybJ9g==",
+      "path": "google.protobuf/3.7.0",
+      "hashPath": "google.protobuf.3.7.0.nupkg.sha512"
+    },
+    "Microsoft.Win32.SystemEvents/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-K2TAr07pgl/m/J9ed3cmAzx0SD55kYuVfBG6SPRIH/ELTh/D2qGrjOWDQJo7r+LZl1nO2Nkl0UAQBUt6S2ewqQ==",
+      "path": "microsoft.win32.systemevents/4.5.0",
+      "hashPath": "microsoft.win32.systemevents.4.5.0.nupkg.sha512"
+    },
+    "Newtonsoft.Json/12.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mtweBXPWhp1CMQATtBT7ZfMZrbZBTKfjGwz6Y75NwGjx/GztDaUnfw8GK9KZ2T4fDIqKJyDjc9Rxlw5+G2FcVA==",
+      "path": "newtonsoft.json/12.0.2",
+      "hashPath": "newtonsoft.json.12.0.2.nupkg.sha512"
+    },
+    "NumSharp/0.10.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hiEgegRUzZdMtRbElqZhIlAY9eom1U9pTG29o243l1c1JGjMt/xZbPhCsTiEklR2XhviSaeH+JRbwCllw0J3PQ==",
+      "path": "numsharp/0.10.1",
+      "hashPath": "numsharp.0.10.1.nupkg.sha512"
+    },
+    "System.Drawing.Common/4.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-m3c7Fe/CS/jZ/nLBrxCCh52dYiC33GPbGfcF4CiVukb8+p121XUTHxs6sYKbWfvDVD8JssHcM+HVFLtzl3X3Xw==",
+      "path": "system.drawing.common/4.5.1",
+      "hashPath": "system.drawing.common.4.5.1.nupkg.sha512"
+    },
+    "System.Memory/4.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fvq1GNmUFwbKv+aLVYYdgu/+gc8Nu9oFujOxIjPrsf+meis9JBzTPDL6aP/eeGOz9yPj6rRLUbOjKMpsMEWpNg==",
+      "path": "system.memory/4.5.2",
+      "hashPath": "system.memory.4.5.2.nupkg.sha512"
+    },
+    "System.Numerics.Vectors/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
+      "path": "system.numerics.vectors/4.5.0",
+      "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
+    },
+    "TensorFlow.NET/0.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-V7/hvIwPIbLDQ8ZQpu5RKjc09rVJgb8cuVnqY1bFhaipL5vcTzFVZvjGv/Dgz+Nn9bF1hkXo+c7s0FzLHgD24w==",
+      "path": "tensorflow.net/0.8.0",
+      "hashPath": "tensorflow.net.0.8.0.nupkg.sha512"
+    }
+  }
+}

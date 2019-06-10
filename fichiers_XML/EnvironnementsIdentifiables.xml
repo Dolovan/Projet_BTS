@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<environnementsIdentification>
+  <environnementIdentification libelle="rue">
+        <objetIdentifiable idObj="0"/>
+        <objetIdentifiable idObj="2"/>
+        <objetIdentifiable idObj="1"/>
+        <objetIdentifiable idObj="5"/>
+    </environnementIdentification>
+<environnementIdentification libelle="classe">
+        <objetIdentifiable idObj="7"/>
+        <objetIdentifiable idObj="1"/>
+        <objetIdentifiable idObj="13"/>
+        <objetIdentifiable idObj="9"/>
+	<objetIdentifiable idObj="78"/>
+        <objetIdentifiable idObj="14"/>
+        <objetIdentifiable idObj="10"/>
+        <objetIdentifiable idObj="3"/>
+    </environnementIdentification>
+<environnementIdentification libelle="chambre">
+        <objetIdentifiable idObj="4"/>
+        <objetIdentifiable idObj="54"/>
+        <objetIdentifiable idObj="2"/>
+        <objetIdentifiable idObj="21"/>
+    </environnementIdentification>
+  <environnementIdentification libelle="parking">
+        <objetIdentifiable idObj="4"/>
+        <objetIdentifiable idObj="5"/>
+   </environnementIdentification>
+ </environnementsIdentification>

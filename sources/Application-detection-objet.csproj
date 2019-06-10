@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RootNamespace>Application_detection_objet</RootNamespace>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="System.Drawing.Common" Version="4.5.1" />
+    <PackageReference Include="TensorFlow.NET" Version="0.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="NumSharp.Core">
+      <HintPath>..\lib\NumSharp.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objetsIdentifiables>
+   <objetIdentifiable idObj="0" cat1="4" cat2="1" libelle="trotinette">
+       <tailleStandard x="13.25" y="46.00" z="79.5"/>
+       <rotation x="3.25" y="451.1" z="7.5"/>
+   </objetIdentifiable>
+   <objetIdentifiable  idObj="1" cat1="4" cat2="1" libelle="moto">
+       <tailleStandard x="1.25" y="476.1" z="81.4"/>
+       <rotation x="143.25" y="45.1" z="78.5"/>
+   </objetIdentifiable>
+	<objetIdentifiable  idObj="5" cat1="2" cat2="1" libelle="humain">
+       <tailleStandard x="50" y="30" z="1.8"/>
+       <rotation x="143.25" y="45.1" z="78.5"/>
+   </objetIdentifiable>
+</objetsIdentifiables>
