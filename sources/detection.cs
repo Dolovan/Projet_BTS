@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
@@ -86,8 +86,8 @@ namespace Application
                 Console.WriteLine("| " + DateTime.Now.ToString("HH:mm:ss", System.Globalization.DateTimeFormatInfo.InvariantInfo) + " | Méthode: \"ParsePbtxtFile(string filePath)\"                     |");
                 Console.WriteLine("| Impossible d'ouvrir le fichier \"" + filePath + "\".  |");
                 Console.WriteLine("+-------------------------------------------------------------------------------+");
-                Console.WriteLine("| Conseil: Vérifié que le fichier placé en paramètre existe.  |");
-                 Console.WriteLine("+-------------------------------------------------------------+");
+                Console.WriteLine("| Conseil: Vérifier que le fichier placé en paramètre existe.  |");
+                 Console.WriteLine("+--------------------------------------------------------------+");
 
                 return null;
             }
@@ -183,9 +183,9 @@ namespace Application
                 Console.WriteLine("+--------------------------------------------------------------+");
                 Console.WriteLine("| " + DateTime.Now.ToString("HH:mm:ss", System.Globalization.DateTimeFormatInfo.InvariantInfo) + " | Méthode: \"changerImage_depuisImage(Image image)\"  |");
                 Console.WriteLine("| La variable \"image\" vaut: null.                              |");
-                Console.WriteLine("+---------------------------------------------------------------------------------------+");
-                Console.WriteLine("| Conseil: Vérifié le paramètre de la méthode \"changerImage_depuisImage(Image image)\".  |");
-                Console.WriteLine("+---------------------------------------------------------------------------------------+");
+                Console.WriteLine("+----------------------------------------------------------------------------------------+");
+                Console.WriteLine("| Conseil: Vérifier le paramètre de la méthode \"changerImage_depuisImage(Image image)\".  |");
+                Console.WriteLine("+----------------------------------------------------------------------------------------+");
                 Console.WriteLine(" ");
             }
         }
