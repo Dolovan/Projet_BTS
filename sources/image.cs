@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Drawing;
 using System.IO;
 using System.Xml;
@@ -492,13 +492,11 @@ namespace Application
                 Console.WriteLine(" ");
                 Console.WriteLine(@"Format d'enregistrement: " + this.getFormat());
 
-
             }
             catch
             {
                 Console.WriteLine(@"Aucun affichage posible.");
             }
         }
-
     }
 }
