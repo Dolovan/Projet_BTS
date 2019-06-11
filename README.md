@@ -1,4 +1,4 @@
-# Application de détection et positionnement d'objet
+# Application de détection et de positionnement d'objet
 
 A remplir
 
