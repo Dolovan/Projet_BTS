@@ -112,7 +112,7 @@ Exemple d'utilisation:
 **void PositionnerObjetsDansImage()**
 
 Cette méthode permet à l'application de récupérer l'emplacement des objets dans l'image.
-Elle s'utilise **après** la méthode "void IdentifierObjet()".
+Cette méthode s'utilise **après** la méthode "void IdentifierObjet()".
 	
 Exemple d'utilisation:
 
@@ -131,21 +131,64 @@ Exemple d'utilisation:
 	
 	application.GenererImageSortie(@"..\..\..\..\images\output.jpg");
 ---   
-//Le paramètre est optionnel, c'est le chemin du fichier de sortie.
+**void GenererScene3d()**
 
-//application.GenererScene3d();
+Cette méthode génère la scène 3D.
+Cette méthode s'utilise **après** la méthode "void PositionnerObjetsDansImage()".
 
-//application.ExporterScene3DversXMLDocument();
+Exemple d'utilisation:
+	
+	application.GenererScene3d();
+---   
+ **XmlDocument ExporterScene3DversXMLDocument()**
+ 
+Cette méthode renvoie la scène 3D dans un objet de type XmlDocument.
 
-//application.ExporterScene3DversFichierXML(@"..\..\..\..\fichiers_XML\sortie.xml");
+Exemple d'utilisation:
+	
+	XmlDocument XMLScene3D = application.ExporterScene3DversXMLDocument();
+---   
+**void ExporterScene3DversFichierXML(string fichierScene3D)**
 
-application.AfficherRenduDetectionImage();
+Cette méthode enregistre la scène 3D dans un fichier au format XML.
 
-//application.AfficherNuagePoints3D();
+Exemple d'utilisation:
+	
+	application.ExporterScene3DversFichierXML(@"..\..\..\..\fichiers_XML\sortie.xml");
+---   
+**void AfficherRenduDetectionImage()**
 
-//application.AfficherScene3D();
+Cette méthode affiche l'image qui à été générer.
+Cette méthode s'utilise **après** la méthode "void GenererImageSortie(string filename = "output.jpg")".
 
-//application.AfficherRenduDetectionConsole();
+Exemple d'utilisation:
+	
+	application.AfficherRenduDetectionImage();
+---   
+**void AfficherNuagePoints3D()**
+
+Cette méthode affiche les informations concernant le nuage de points 3D.
+
+Exemple d'utilisation:
+
+	application.AfficherNuagePoints3D();
+---   
+**application.AfficherScene3D()**
+
+Cette méthode affiche les informations concernant la scène 3D.
+
+Exemple d'utilisation:
+
+	application.AfficherScene3D();
+---   
+**void AfficherRenduDetectionConsole()**
+
+Cette méthode affiche dans la console, les informations concernant la détection des objets.
+
+Exemple d'utilisation:
+
+	application.AfficherRenduDetectionConsole();
+---   
 
 **void AfficherObjetsIdentifiables()**
 
