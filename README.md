@@ -222,3 +222,5 @@ Exemple d'utilisation:
 	
 	application.AfficherTout();
 ---   
+
+2 425‬ lignes de code
