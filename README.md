@@ -32,65 +32,64 @@ Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about St
 
 ## Méthodes
 
+**void ChargerEnvironnementsIdentifiables_depuisFichierXML(string fichierEnvironnemtsIdentifiables)**
 
- void ChargerEnvironnementsIdentifiables_depuisFichierXML(string fichierEnvironnemtsIdentifiables)
+Exemple d'utilisation:
 
-	Exemple:
-	
 	application.ChargerEnvironnementsIdentifiables_depuisFichierXML(@"..\EnvironnementsIdentifiables.xml");
 ---
-void ChargerEnvironnementsIdentifiables_depuisXmlDocument(XmlDocument XMLEnvironnementsIdentifiables)
+**void ChargerEnvironnementsIdentifiables_depuisXmlDocument(XmlDocument XMLEnvironnementsIdentifiables)**
 
-	Exemple:
+Exemple d'utilisation:
 	
 	XmlDocument XMLEnvironnementsIdentifiables = new XmlDocument();
 	ChargerEnvironnementsIdentifiables_depuisXmlDocument(XMLEnvironnementsIdentifiables);
 ---
-void ChargerImageOrientee_depuisFichierXML(string fichierImageOrientee)
+**void ChargerImageOrientee_depuisFichierXML(string fichierImageOrientee)**
 
-	Exemple:
+Exemple d'utilisation:
 	
 	application.ChargerImageOrientee_depuisFichierXML(@"..\ImageOrientee.xml");
 ---
-void ChargerImageOrientee_depuisXmlDocument(XmlDocument XMLImageOrientee)
+**void ChargerImageOrientee_depuisXmlDocument(XmlDocument XMLImageOrientee)**
 
-	Exemple:
+Exemple d'utilisation:
 	
 	XmlDocument XMLImageOrientee = new XmlDocument();
 	application.ChargerImageOrientee_depuisXmlDocumentL(XMLImageOrientee);
 ---   
 
-void ChargerNuagePoint3D_depuisFichierXML(string fichierNuagePoint3D)
+**void ChargerNuagePoint3D_depuisFichierXML(string fichierNuagePoint3D)**
 
-	Exemple:
+Exemple d'utilisation:
 	
 	application.ChargerNuagePoint3D_depuisFichierXML(@"..\NuagePoints3D.xml");
 ---   
-void ChargerNuagePoints3D_depuisXmlDocument(XmlDocument XMLNuagePoints3D)
+**void ChargerNuagePoints3D_depuisXmlDocument(XmlDocument XMLNuagePoints3D)**
 
-	Exemple:
+Exemple d'utilisation:
 	
 	XmlDocument XMLNuagePoint3D = new XmlDocument();
 	application.ChargerNuagePoint3D_depuisXmlDocument(XMLNuagePoint3D);
 ---   
-void ChargerObjetsIdentifiables_depuisFichierXML(string fichierObjetsIdentifiables);
+**void ChargerObjetsIdentifiables_depuisFichierXML(string fichierObjetsIdentifiables)**
 	
-	Exemple:
+Exemple d'utilisation:
 	
 	application.ChargerObjetsIdentifiables_depuisFichierXML(@"..\ObjetsIdentifiables.xml");
 ---   
-void ChargerObjetsIdentifiables_depuisXmlDocument(XmlDocument XMLObjetsIdentifiables)
+**void ChargerObjetsIdentifiables_depuisXmlDocument(XmlDocument XMLObjetsIdentifiables)**
 	
-	Exemple:
+Exemple d'utilisation:
 	
 	XmlDocument XMLObjetsIdentifiables = new XmlDocument();
 	application.ChargerObjetsIdentifiables_depuisXmlDocument(XMLObjetsIdentifiables);
 ---   
-void parametrerDetection(
+**void parametrerDetection(
  float Min_score = 0.5f, 
 string pbFile = @"..\..\..\..\reseaux_neurones\frozen_inference_graph.pb",
 string labelFile = @"..\..\..\..\reseaux_neurones\mscoco_label_map.pbtxt"
-)
+)**
 
 **Min_score** est le score minimum où l'on considère l'objet comme étant détecté.
 
@@ -98,32 +97,37 @@ string labelFile = @"..\..\..\..\reseaux_neurones\mscoco_label_map.pbtxt"
 
 **labelfile** est le chemin vers le fichier contenant les labelles du modèle (extensions .pbtxt).
 
-	Exemple:
+Exemple d'utilisation:
 	
 	application.parametrerDetection(0.1f);
 ---   
-void IdentifierObjets()
+**void IdentifierObjets()**
 
 Cette méthode permet de démarrer la détection d'objet dans l'image.
  
-	Exemple:
+Exemple d'utilisation:
 	
 	application.IdentifierObjets();
 ---   
-void PositionnerObjetsDansImage();
+**void PositionnerObjetsDansImage()**
 
 Cette méthode permet à l'application de récupérer l'emplacement des objets dans l'image.
 Elle s'utilise **après** la méthode "void IdentifierObjet()".
 	
-	Exemple:
-	
+Exemple d'utilisation:
+
 	application.PositionnerObjetsDansImage();
 ---   
-void GenererImageSortie(string filename = "output.jpg")
-**filename** est le chemin de l'image que l'on souhaite générer. Par défaut elle se nomme "output.jpg".
-Sur cette image,   
+**void GenererImageSortie(string filename = "output.jpg")**
 
-	Exemple:
+**filename** est le chemin de l'image que l'on souhaite générer. Par défaut elle se nomme "output.jpg".
+
+Cette méthode s'utilise **après** la méthode "void IdentifierObjet()".
+Sur l'image générer, les objets détectés sont représenté par un rectangle.
+
+**Image à mettre**   
+
+Exemple d'utilisation:
 	
 	application.GenererImageSortie(@"..\..\..\..\images\output.jpg");
 ---   
@@ -143,15 +147,38 @@ application.AfficherRenduDetectionImage();
 
 //application.AfficherRenduDetectionConsole();
 
-//application.AfficherObjetsIdentifiables();
+**void AfficherObjetsIdentifiables()**
 
-//application.AfficherInfoImage();
+Cette méthode affiche les informations concernant les objets identifiables.
 
-//application.AfficherEnvironnemtsIdentifiables();
+Exemple d'utilisation:
 
-//application.AfficherTout();
+	application.AfficherObjetsIdentifiables();
+---   
+**void AfficherInfoImage()**
 
+Cette méthode affiche les informations concernant l'image.
 
+Exemple d'utilisation:
+
+	application.AfficherInfoImage();
+---   
+**void AfficherEnvironnemtsIdentifiables()**
+
+Cette méthode affiche les informations concernant les environnement identifiables.
+
+Exemple d'utilisation:
+
+	application.AfficherEnvironnemtsIdentifiables();
+---   
+**void AfficherTout()**
+
+Cette méthode appelle l'ensemble des autres méthodes "Afficher".
+
+Exemple d'utilisation:
+	
+	application.AfficherTout();
+---   
 
 ## Diagramme de classes
 
