@@ -1,4 +1,4 @@
-﻿using NumSharp;
+using NumSharp;
 using System;
 using System.Collections.Generic;
 using System.Xml;
@@ -131,23 +131,38 @@ namespace Application
         
         public void PositionnerObjetsDansImage()
         {
-            if(this.resultArr != null)
+            if(this.image.GetSecteurAngulaire_azimut_Min() == this.nuagePoint3D.GetSecteurAngulaire_azimut_Min() && this.image.GetSecteurAngulaire_azimut_Max() == this.nuagePoint3D.GetSecteurAngulaire_azimut_Max() && this.image.GetSecteurAngulaire_elevation_Max() == this.nuagePoint3D.GetSecteurAngulaire_elevation_Max() && this.image.GetSecteurAngulaire_elevation_Min() == this.nuagePoint3D.GetSecteurAngulaire_elevation_Min())
             {
-                detection.changerImage_depuisImage(this.image.GetImage());
+                if (this.resultArr != null)
+                {
+                    detection.changerImage_depuisImage(this.image.GetImage());
 
-                this.listeSPositionObjetDansImage =  detection.positionnerObjetsDansImage(this.resultArr);
+                    this.listeSPositionObjetDansImage = detection.positionnerObjetsDansImage(this.resultArr);
+                }
+                else
+                {
+                    Console.WriteLine("+--------------------------------------------+");
+                    Console.WriteLine("| " + DateTime.Now.ToString("HH:mm:ss", System.Globalization.DateTimeFormatInfo.InvariantInfo) + " | Méthode: \"PositionnerObjets()\"  |");
+                    Console.WriteLine("| La variable \"resultArr\" vaut: null.        |");
+                    Console.WriteLine("+---------------------------------------------------------------------------------------------------+");
+                    Console.WriteLine("| Conseil: Vérifier que la méthode \"detection.IdentifierObjets()\" soit appelée avant cette méthode.  |");
+                    Console.WriteLine("+---------------------------------------------------------------------------------------------------+");
+                    Console.WriteLine(" ");
+                    this.listeSPositionObjetDansImage = null;
+                }
             }
             else
             {
-                Console.WriteLine("+--------------------------------------------+");
-                Console.WriteLine("| " + DateTime.Now.ToString("HH:mm:ss", System.Globalization.DateTimeFormatInfo.InvariantInfo) + " | Méthode: \"PositionnerObjets()\"  |");
-                Console.WriteLine("| La variable \"resultArr\" vaut: null.        |");
-                Console.WriteLine("+---------------------------------------------------------------------------------------------------+");
-                Console.WriteLine("| Conseil: Vérifié que la méthode \"detection.IdentifierObjets()\" soit appelée avant cette méthode.  |");
-                Console.WriteLine("+---------------------------------------------------------------------------------------------------+");
+                Console.WriteLine("+----------------------------------------------------------------------------------------+");
+                Console.WriteLine("| " + DateTime.Now.ToString("HH:mm:ss", System.Globalization.DateTimeFormatInfo.InvariantInfo) + " | Méthode: \"PositionnerObjets()\"                                              |");
+                Console.WriteLine("| Les secteurs angulaires entre l'image et le nuage de points 3D ne sont pas identiques. |");
+                Console.WriteLine("+----------------------------------------------------------------------------------------+");
+                Console.WriteLine("| Conseil: Vérifier les secteurs dans les fichiers XML.  |");
+                Console.WriteLine("+--------------------------------------------------------+");
                 Console.WriteLine(" ");
                 this.listeSPositionObjetDansImage = null;
             }
+            
         }
         
         public void GenererScene3d()
@@ -185,10 +200,6 @@ namespace Application
                             {
                                 Console.WriteLine("Distance non disponnible dans le nuage de point 3D");
                             }
-
-                            double entree = 45.47;
-                            double sortie = Math.Cos((entree * Math.PI) / 180) * 3.42;
-
 
                             if (azimutCentreVersObjet < 0)
                             {
@@ -240,9 +251,9 @@ namespace Application
                 Console.WriteLine("+----------------------------------------------------------------------------------------------+");
                 Console.WriteLine("| " + DateTime.Now.ToString("HH:mm:ss", System.Globalization.DateTimeFormatInfo.InvariantInfo) + " | Méthode: \"GenererScene3d(List<SPositionObjetDansImage> sPositionObjetDansImage)\"  |");
                 Console.WriteLine("| La variable \"sPositionObjetDansImage\" vaut: null.                                            |");
-                Console.WriteLine("+---------------------------------------------------------------------------------------------------------------+");
-                Console.WriteLine("| Conseil: Vérifié que la méthode \"application.PositionnerObjetsDansImage()\" soit appelée avant cette méthode.  |");
-                Console.WriteLine("+---------------------------------------------------------------------------------------------------------------+");
+                Console.WriteLine("+----------------------------------------------------------------------------------------------------------------+");
+                Console.WriteLine("| Conseil: Vérifier que la méthode \"application.PositionnerObjetsDansImage()\" soit appelée avant cette méthode.  |");
+                Console.WriteLine("+----------------------------------------------------------------------------------------------------------------+");
                 Console.WriteLine(" ");
             }
         }
@@ -303,5 +314,3 @@ namespace Application
         }
     }
 }
-
-   
