@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Xml;
 
@@ -46,10 +46,12 @@ namespace Application
 
     class CNuagePoints3D
     {
-         List<CPoint3d> lPoints3D;
+        List<CPoint3d> lPoints3D;
+        SSecteurAngulaire secteurAngulaire;
 
         public CNuagePoints3D()
         {
+            this.secteurAngulaire = new SSecteurAngulaire();
             this.lPoints3D = new List<CPoint3d>();
         }
 
@@ -69,10 +71,38 @@ namespace Application
             return this.lPoints3D.IndexOf(point3D);
         }
 
+        public int GetSecteurAngulaire_elevation_Max()
+        {
+            return this.secteurAngulaire.elevation_Max;
+        }
+
+        public int GetSecteurAngulaire_elevation_Min()
+        {
+            return this.secteurAngulaire.elevation_Min;
+        }
+
+        public int GetSecteurAngulaire_azimut_Max()
+        {
+            return this.secteurAngulaire.azimut_Max;
+        }
+
+        public int GetSecteurAngulaire_azimut_Min()
+        {
+            return this.secteurAngulaire.azimut_Min;
+        }
+
+        public void SetSecteurAngulaire(int elevation_Max, int elevation_Min, int azimut_Max, int azimut_Min)
+        {
+            this.secteurAngulaire.elevation_Max = elevation_Max;
+            this.secteurAngulaire.elevation_Min = elevation_Min;
+            this.secteurAngulaire.azimut_Max = azimut_Max;
+            this.secteurAngulaire.azimut_Min = azimut_Min;
+        }
+
         public void ChargerNuagePoints3D_depuisXmlDocument(XmlDocument xmlDoc_NuagePoints3D)
         {
             XmlNodeList listePoints3D = xmlDoc_NuagePoints3D.GetElementsByTagName("point3d");
-            XmlElement xmlElementNuagePoints3D = (XmlElement)xmlDoc_NuagePoints3D.GetElementsByTagName("nuagePoints").Item(0);
+            XmlElement xmlElementNuagePoints3D = (XmlElement)xmlDoc_NuagePoints3D.GetElementsByTagName("nuagePoints").Item(0);   
 
             if (xmlElementNuagePoints3D != null)
             {
@@ -87,6 +117,17 @@ namespace Application
                             for (int i = 0; i < listePoints3D.Count; i++)
                             {
                                 XmlElement xmlElementPoint3D = (XmlElement)xmlDoc_NuagePoints3D.GetElementsByTagName("point3d").Item(i);
+
+                                if (Convert.ToInt32(xmlElementPoint3D.GetAttribute("azimut")) < this.secteurAngulaire.azimut_Min)
+                                    this.secteurAngulaire.azimut_Min = Convert.ToInt32(xmlElementPoint3D.GetAttribute("azimut"));
+                                if (Convert.ToInt32(xmlElementPoint3D.GetAttribute("azimut")) > this.secteurAngulaire.azimut_Max)
+                                    this.secteurAngulaire.azimut_Max = Convert.ToInt32(xmlElementPoint3D.GetAttribute("azimut"));
+
+                                if (Convert.ToInt32(xmlElementPoint3D.GetAttribute("elevation")) < this.secteurAngulaire.elevation_Min)
+                                    this.secteurAngulaire.elevation_Min = Convert.ToInt32(xmlElementPoint3D.GetAttribute("elevation"));
+                                if (Convert.ToInt32(xmlElementPoint3D.GetAttribute("elevation")) > this.secteurAngulaire.elevation_Max)
+                                    this.secteurAngulaire.elevation_Max = Convert.ToInt32(xmlElementPoint3D.GetAttribute("elevation"));
+
                                 this.AjouterPoint3D(new CPoint3d());
                                 this.lPoints3D[i].SetPoint3d_azimut(Convert.ToDouble(xmlElementPoint3D.GetAttribute("azimut")));
                                 this.lPoints3D[i].SetPoint3d_elevation(Convert.ToDouble(xmlElementPoint3D.GetAttribute("elevation")));
