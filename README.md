@@ -1,8 +1,5 @@
 # Application de détection et de positionnement d'objet
 
-A remplir
-
-
 # Prérequis
 
  
